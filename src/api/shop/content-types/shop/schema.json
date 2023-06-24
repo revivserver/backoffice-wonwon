@@ -1,0 +1,105 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shops",
+  "info": {
+    "singularName": "shop",
+    "pluralName": "shops",
+    "displayName": "Shop",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "shop_images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "province": {
+      "type": "string",
+      "required": true
+    },
+    "district": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "sub_district": {
+      "type": "string"
+    },
+    "address_detail": {
+      "type": "text"
+    },
+    "landmark": {
+      "type": "text"
+    },
+    "operators": {
+      "type": "json"
+    },
+    "latitude": {
+      "type": "float",
+      "required": true
+    },
+    "longitude": {
+      "type": "float",
+      "required": true
+    },
+    "contacts": {
+      "type": "json"
+    },
+    "payments": {
+      "type": "json"
+    },
+    "establish_date": {
+      "type": "date"
+    },
+    "fitting_room": {
+      "type": "integer",
+      "default": 0
+    },
+    "notes": {
+      "type": "json"
+    },
+    "create_time": {
+      "type": "datetime"
+    },
+    "update_time": {
+      "type": "datetime",
+      "required": false
+    },
+    "shop_operating_times": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shop-operating-time.shop-operating-time",
+      "mappedBy": "shop"
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "shop"
+    },
+    "shop_repair_tag_links": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shop-repair-tag-link.shop-repair-tag-link",
+      "mappedBy": "shop"
+    },
+    "google_map_url": {
+      "type": "string"
+    }
+  }
+}
