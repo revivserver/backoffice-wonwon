@@ -11,9 +11,9 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@strapi/strapi": "4.15.5",
-    "@strapi/plugin-users-permissions": "4.15.5",
-    "@strapi/plugin-i18n": "4.15.5",
+    "@strapi/strapi": "4.25.21",
+    "@strapi/plugin-users-permissions": "4.25.21",
+    "@strapi/plugin-i18n": "4.25.21",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
