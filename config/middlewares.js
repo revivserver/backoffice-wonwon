@@ -1,4 +1,5 @@
 module.exports = [
+  "strapi::logger",
   "strapi::errors",
   /* Replace 'strapi::security', with this snippet */
   /* Beginning of snippet */
@@ -31,7 +32,6 @@ module.exports = [
   /* End of snippet */
   "strapi::cors",
   "strapi::poweredBy",
-  "strapi::logger",
   "strapi::query",
   "strapi::body",
   "strapi::session",
