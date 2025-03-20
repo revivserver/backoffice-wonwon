@@ -73,13 +73,6 @@
     "notes": {
       "type": "json"
     },
-    "create_time": {
-      "type": "datetime"
-    },
-    "update_time": {
-      "type": "datetime",
-      "required": false
-    },
     "shop_operating_times": {
       "type": "relation",
       "relation": "oneToMany",

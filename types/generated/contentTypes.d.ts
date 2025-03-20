@@ -593,7 +593,6 @@ export interface ApiShopShop extends Struct.CollectionTypeSchema {
   attributes: {
     address_detail: Schema.Attribute.Text;
     contacts: Schema.Attribute.JSON;
-    create_time: Schema.Attribute.DateTime;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -629,7 +628,6 @@ export interface ApiShopShop extends Struct.CollectionTypeSchema {
       'api::shop-repair-tag-link.shop-repair-tag-link'
     >;
     sub_district: Schema.Attribute.String;
-    update_time: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
