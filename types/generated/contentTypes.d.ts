@@ -390,7 +390,7 @@ export interface ApiRepairTagRepairTag extends Struct.CollectionTypeSchema {
       'api::repair-tag.repair-tag'
     > &
       Schema.Attribute.Private;
-    main_category_id: Schema.Attribute.Integer;
+    main_category_id: Schema.Attribute.String;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
