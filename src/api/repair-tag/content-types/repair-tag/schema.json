@@ -17,7 +17,7 @@
       "required": true
       
     }, "main_category_id": {
-      "type": "integer"
+      "type": "string"
     }
   }
 }

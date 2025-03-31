@@ -11,7 +11,7 @@ module.exports = createCoreController("api::review.review", ({ strapi }) => ({
     const user = ctx.state.user;
     const { shop, review, username, score, tags, images } =
       ctx.request.body.data;
-    const userReview = await strapi.entityService.create("api::review.review", {
+    const userReview = await strapi.documents("api::review.review").create({
       data: {
         shop,
         review,
@@ -23,15 +23,12 @@ module.exports = createCoreController("api::review.review", ({ strapi }) => ({
 
     await Promise.all(
       tags.map(async (tag) => {
-        const tag_link = await strapi.entityService.create(
-          "api::review-tag-link.review-tag-link",
-          {
-            data: {
-              review: userReview.id,
-              review_tag: tag,
-            },
-          }
-        );
+        const tag_link = await strapi.documents("api::review-tag-link.review-tag-link").create({
+          data: {
+            review: userReview.id,
+            review_tag: tag,
+          },
+        });
       })
     );
 
